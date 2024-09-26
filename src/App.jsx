@@ -10,10 +10,12 @@ function App() {
   return (
     <>
     <Header componentText= {"Where in the world?"} componentTheme = {"Dark Theme"}/>
+    <main>
     <div className="search-filter-container">
     <SearchBar placeholder = {"Search for a country..."}/>
     <SelectMenu />
     </div>
+    </main>
     </>
   )
 }
