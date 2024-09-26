@@ -2,6 +2,7 @@ import React from "react"
 import SearchBar from "./components/SearchBar"
 import Header from "./components/Header"
 import SelectMenu from "./components/SelectMenu"
+import CountriesList from "./components/CountriesList"
 import "./App.css"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <SearchBar placeholder = {"Search for a country..."}/>
     <SelectMenu />
     </div>
+    <CountriesList />
     </main>
     </>
   )
