@@ -22,7 +22,7 @@ import React from 'react'
 //   )
 // }
 
-export default function CountryCard({name,flag,Population,region,capital}) {
+export default function CountryCard({name,flag,Population,region,capital,translations}) {
   
   return (
     <a className="country-card" href={`/country.html?name=${name}`}>
@@ -39,6 +39,9 @@ export default function CountryCard({name,flag,Population,region,capital}) {
         </p>
         <p>
           <b>Capital: </b>{capital}
+        </p>
+        <p>
+          <b>Translation: </b>{translations}
         </p>
       </div>
     </a>

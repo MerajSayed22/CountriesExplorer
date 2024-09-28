@@ -3,9 +3,12 @@ import SearchBar from "./components/SearchBar"
 import Header from "./components/Header"
 import SelectMenu from "./components/SelectMenu"
 import CountriesList from "./components/CountriesList"
+import {useState} from  "react"
 import "./App.css"
 
 function App() {
+
+  const [userInput,setUserInput] = useState('');
 
 
   return (
@@ -13,10 +16,10 @@ function App() {
     <Header componentText= {"Where in the world?"} componentTheme = {"Dark Theme"}/>
     <main>
     <div className="search-filter-container">
-    <SearchBar placeholder = {"Search for a country..."}/>
+    <SearchBar placeholder = {"Search for a country..."} setUserInput = {setUserInput} />
     <SelectMenu />
     </div>
-    <CountriesList />
+    <CountriesList userInput={userInput}/>
     </main>
     </>
   )
