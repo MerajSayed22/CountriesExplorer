@@ -10,7 +10,6 @@ function App() {
 
   const [userInput,setUserInput] = useState('');
 
-
   return (
     <>
     <Header componentText= {"Where in the world?"} componentTheme = {"Dark Theme"}/>

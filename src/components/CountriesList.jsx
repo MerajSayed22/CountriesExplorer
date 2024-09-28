@@ -3,7 +3,7 @@ import countriesData from '../countriesData'
 import CountryCard from './CountryCard'
 
 export default function CountriesList({userInput}) {
-
+//adding API
   return (
 
     <div className='countries-container'>
