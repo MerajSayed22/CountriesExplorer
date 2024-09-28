@@ -6,7 +6,7 @@ export default function SearchBar({placeholder,setUserInput}) {
     <>
     <div className="search-container">
       <i className="fa-solid fa-magnifying-glass"></i>
-      <input type="text" 
+      <input type="search" 
       placeholder={placeholder} 
       onChange={(e)=>{
         setUserInput(e.target.value.toLowerCase())

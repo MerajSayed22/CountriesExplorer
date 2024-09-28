@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 // export default function CountryCard({ name, flag, population, region, capital }) {
@@ -22,7 +22,8 @@ import React from 'react'
 //   )
 // }
 
-export default function CountryCard({name,flag,Population,region,capital,translations}) {
+export default function CountryCard({name,flag,Population,region,capital,translations,landlocked}) {
+  const isLandLocked = landlocked ? "Yes":" No"
   
   return (
     <a className="country-card" href={`/country.html?name=${name}`}>
@@ -42,6 +43,9 @@ export default function CountryCard({name,flag,Population,region,capital,transla
         </p>
         <p>
           <b>Translation: </b>{translations}
+        </p>
+        <p>
+          <b>Landlocked Country ? </b>{isLandLocked}
         </p>
       </div>
     </a>
