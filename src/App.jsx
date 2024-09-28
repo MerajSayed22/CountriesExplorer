@@ -1,9 +1,9 @@
+import {useState} from  "react"
 import React from "react"
 import SearchBar from "./components/SearchBar"
 import Header from "./components/Header"
 import SelectMenu from "./components/SelectMenu"
 import CountriesList from "./components/CountriesList"
-import {useState} from  "react"
 import "./App.css"
 
 function App() {
