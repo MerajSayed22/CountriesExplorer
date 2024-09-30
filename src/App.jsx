@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar"
 import Header from "./components/Header"
 import SelectMenu from "./components/SelectMenu"
 import CountriesList from "./components/CountriesList"
+import {Outlet} from "react-router-dom"
 import "./App.css"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+    
     <Header componentText= {"Where in the world?"} componentTheme = {"Dark Theme"}/>
     <main>
     <div className="search-filter-container">

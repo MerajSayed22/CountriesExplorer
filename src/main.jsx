@@ -9,9 +9,10 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/country.html?name=${name}",
-    element: <App />,
+    path: "/contact",
+    element: <div>"Hi lullul"</div>,
   },
+  
 ]);
 
 
