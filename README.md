@@ -29,7 +29,7 @@ bash
 
 <p>Install Dependencies: Make sure you have Node.js installed. Then run: </p>
 
-bash
+<p>bash
 
 npm install
 
@@ -38,21 +38,25 @@ Run the App: Start the development server with:
 bash
 Copy code
 npm start
-Open your browser and navigate to http://localhost:3000 to view the app.
+Open your browser and navigate to http://localhost:3000 to view the app.</p>
 
-Technologies Used
-React: Frontend library for building user interfaces.
-React Router DOM: For dynamic routing and navigation.
-CSS: For styling the application.
-Axios: For making API requests (if applicable).
-React Hooks: To manage state and lifecycle methods.
-How to Use
-Upon loading the app, you will see a grid of country cards.
-Use the search bar to filter countries by name.
-Click on the sorting options to organize the countries based on your preferences.
-Click on any country card to view detailed information such as population, area, languages, and more.
-Routing
-This app utilizes React Router DOM for navigation between different country detail pages. Each country card is linked to its own route, ensuring a seamless user experience.
+<bold>Technologies Used</bold>
 
-Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
+<p>React: Frontend library for building user interfaces.</p>
+<p>React Router DOM: For dynamic routing and navigation.</p>
+<p>CSS: For styling the application.</p>
+<p>Fetch: For making API requests.</p>
+<p>React Hooks: To manage state and lifecycle methods.</p>
+  
+<bold>How to Use</bold>
+
+<p>Upon loading the app, you will see a grid of country cards.</p>
+<p>Use the search bar to filter countries by name.</p>
+<p>Click on the sorting options to organize the countries based on your preferences.</p>
+<p>Click on any country card to view detailed information such as population, area, languages, and more.</p>
+  
+<bold>Routing</bold>
+<p>This app utilizes React Router DOM for navigation between different country detail pages. Each country card is linked to its own route, ensuring a seamless user experience.</p>
+
+<bold>Contributing</bold>
+<p>Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.</p>
