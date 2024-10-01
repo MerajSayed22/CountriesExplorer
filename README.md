@@ -2,7 +2,7 @@
 <h2>Welcome to the Countries Explorer app! This React application allows users to explore information about over 200 countries, complete with flags and additional details. The app features powerful search and sorting capabilities to help you find the countries you’re interested in.</h2>
 
 
-<ul>Table of Contents</ul>
+<b>Table of Contents</b>
 <ul>
 <li>Features</li>
 <li>Getting Started</li>
@@ -18,10 +18,10 @@
 <p>Sorting: Sort countries by Grographcal region.</p>
 <p>Dynamic Routing: Click on a country card to view more detailed information using React Router DOM.</p>
   
-<bold>Getting Started</bold>
+<b>Getting Started</b>
 <p>To run the Countries Explorer app locally, follow these steps:</p>
 
-<bold>Clone the Repository:</bold>
+<b>Clone the Repository:</b>
 
 bash
 
@@ -42,7 +42,7 @@ Copy code
 npm start
 Open your browser and navigate to http://localhost:3000 to view the app.</p>
 
-<bold>Technologies Used</bold>
+<b>Technologies Used</b>
 
 <p>React: Frontend library for building user interfaces.</p>
 <p>React Router DOM: For dynamic routing and navigation.</p>
@@ -50,15 +50,15 @@ Open your browser and navigate to http://localhost:3000 to view the app.</p>
 <p>Fetch: For making API requests.</p>
 <p>React Hooks: To manage state and lifecycle methods.</p>
   
-<bold>How to Use</bold>
+<b>How to Use</b>
 
 <p>Upon loading the app, you will see a grid of country cards.</p>
 <p>Use the search bar to filter countries by name.</p>
 <p>Click on the sorting options to organize the countries based on your preferences.</p>
 <p>Click on any country card to view detailed information such as population, area, languages, and more.</p>
   
-<bold>Routing</bold>
+<b>Routing</b>
 <p>This app utilizes React Router DOM for navigation between different country detail pages. Each country card is linked to its own route, ensuring a seamless user experience.</p>
 
-<bold>Contributing</bold>
+<b>Contributing</b>
 <p>Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.</p>
