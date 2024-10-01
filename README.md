@@ -13,7 +13,7 @@
 <bold>Features</bold>
 <p>Country Cards: View cards for each country displaying the flag and key information.</p>
 <p>Search Functionality: Easily search for countries by name.</p>
-<p>Sorting: Sort countries by name, population, area, and more.</p>
+<p>Sorting: Sort countries by Grographcal region.</p>
 <p>Dynamic Routing: Click on a country card to view more detailed information using React Router DOM.</p>
   
 <bold>Getting Started</bold>
