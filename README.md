@@ -1,7 +1,7 @@
 <h1>Countries Explorer</h1>
 <h2>Welcome to the Countries Explorer app! This React application allows users to explore information about over 200 countries, complete with flags and additional details. The app features powerful search and sorting capabilities to help you find the countries you’re interested in.</h2>
 
-<b>Table of Contents</b>
+<b><ul>Table of Contents</ul></b>
 <ul>
 <li>Features</li>
 <li>Getting Started</li>
@@ -11,7 +11,7 @@
 <li>Contributing</li>
 </ul>
   
-<bold>Features</bold>
+<b>Features</b>
 <p>Country Cards: View cards for each country displaying the flag and key information.</p>
 <p>Search Functionality: Easily search for countries by name.</p>
 <p>Sorting: Sort countries by Grographcal region.</p>
