@@ -23,8 +23,6 @@
 
 <b>Clone the Repository:</b>
 
-bash
-
 <p>git clone https://github.com/merajsayed22/CountriesExplorer.git</p>
 
 <p>cd CountriesExplorer</p>
