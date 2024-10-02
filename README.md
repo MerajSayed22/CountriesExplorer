@@ -60,5 +60,5 @@ Open your browser and navigate to http://localhost:3000 to view the app.</p>
 <b>Routing</b>
 <p>This app utilizes React Router DOM for navigation between different country detail pages. Each country card is linked to its own route, ensuring a seamless user experience.</p>
 
-<b>Contributing</b>
+<b>Contributing</b> <br>
 <p>Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.</p>
