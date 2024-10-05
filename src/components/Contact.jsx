@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>Hi this is Contact</div>
+    <div><h1>Hi this is Contact</h1></div>
   )
 }
 
