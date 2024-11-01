@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Contact  from './components/Contact'
 import Error from './components/Error'
 import App from './App'
+import CountryDetail from './components/CountryDetail'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/countryDetail",
+        element: <CountryDetail />,
       },
     ]
   },
