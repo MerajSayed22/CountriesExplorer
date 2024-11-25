@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom"
 
 import './CountryDetail.css'
 
 export default function CountryDetail() {
-  const countryName = new URLSearchParams(location.search).get('name')
+  const countryName = new URLSearchParams(location.search).get('name');
+  console.log(new URLSearchParams());
 
   const [countryData, setCountryData] = useState(null)
 
@@ -34,9 +36,12 @@ export default function CountryDetail() {
   ) : (
     <main>
       <div className="country-details-container">
-        <span className="back-button">
+       
+       <Link className="back-button" to={`/`}>
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
-        </span>
+        </Link>
+      
+        
         <div className="country-details">
           <img src={countryData.flag} alt={`${countryData.name} flag`} />
           <div className="details-text-container">
