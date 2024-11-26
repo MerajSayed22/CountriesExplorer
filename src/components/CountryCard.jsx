@@ -5,7 +5,7 @@ export default function CountryCard({name,flag,Population,region,capital,transla
   const isLandLocked = landlocked ? "Yes":" No"
   
   return (
-    <Link className="country-card" to={`/country?name=${name}`}>
+    <Link className="country-card" to={`/${name}`}>
       <img src={flag} alt={`${name} Flag`} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>

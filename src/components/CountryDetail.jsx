@@ -1,47 +1,54 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 import './CountryDetail.css'
 
 export default function CountryDetail() {
-  const countryName = new URLSearchParams(location.search).get('name');
-  console.log(new URLSearchParams());
 
-  const [countryData, setCountryData] = useState(null)
+  const params = useParams();
+  const countryName = params.country;
+  const [countryData, setCountryData] = useState(null);
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       .then((res) => res.json())
       .then(([data]) => {
-        console.log(data)
-        setCountryData({
-          name: data.name.common,
-          nativeName: Object.values(data.name.nativeName)[0].common,
-          population: data.population,
-          region: data.region,
-          subregion: data.subregion,
-          capital: data.capital,
-          flag: data.flags.svg,
-          tld: data.tld,
-          languages: Object.values(data.languages).join(', '),
-          currencies: Object.values(data.currencies)
-            .map((currency) => currency.name)
-            .join(', '),
-          
-        })
+          setCountryData({ name: data.name.common || "Not Available",
+            nativeName: Object.values(data.name.nativeName)[0].common || "Not Available",
+            population: data.population || 0,
+            region: data.region || "Not Available",
+            subregion: data.subregion || "Not Available",
+            capital: data.capital || "Not Available",
+            flag: data.flags.svg || "Not Available",
+            tld: data.tld || "Not Available",
+            languages: Object.values(data.languages).join(', ') || "Not Available",
+            currencies: Object.values(data.currencies)
+              .map((currency) => currency.name)
+              .join(', ') || "Not Available",
+            })
       })
+    // .catch((err)=> {
+    //   if(err){
+    //     setNotFound("no country exists by this name");
+    //   }
+    // })
   }, [])
+
+
+
+
+
   return countryData === null ? (
-    'loading...'
+    `Loading...`
   ) : (
     <main>
       <div className="country-details-container">
-       
-       <Link className="back-button" to={`/`}>
+
+        <Link className="back-button" to={`/`}>
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
         </Link>
-      
-        
+
+
         <div className="country-details">
           <img src={countryData.flag} alt={`${countryData.name} flag`} />
           <div className="details-text-container">
