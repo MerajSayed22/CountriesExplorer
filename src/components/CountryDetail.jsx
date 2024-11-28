@@ -8,6 +8,9 @@ export default function CountryDetail() {
   const params = useParams();
   const countryName = params.country;
   const [countryData, setCountryData] = useState(null);
+  const [notFound,setNotFound] = useState("");
+
+  console.log("renders...")
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
@@ -25,21 +28,21 @@ export default function CountryDetail() {
             currencies: Object.values(data.currencies)
               .map((currency) => currency.name)
               .join(', ') || "Not Available",
+            borders:['India'],
             })
       })
-    // .catch((err)=> {
-    //   if(err){
-    //     setNotFound("no country exists by this name");
-    //   }
-    // })
-  }, [])
-
-
+      .catch((err) => {
+        // Set the error message after a delay (e.g., 3 seconds)
+        setTimeout(() => {
+          setNotFound("No country exists by this name");
+        }, 1000); // 3000 milliseconds = 3 seconds
+      });
+  }, [countryName]);
 
 
 
   return countryData === null ? (
-    `Loading...`
+    `Loading...${notFound}`
   ) : (
     <main>
       <div className="country-details-container">
@@ -91,6 +94,10 @@ export default function CountryDetail() {
             </div>
             <div className="border-countries">
               <b>Border Countries: </b>&nbsp;
+              {
+                countryData.borders.map((border)=><Link key={border} to={`/${border}`}>{border}</Link>)
+              }
+
             </div>
           </div>
         </div>
