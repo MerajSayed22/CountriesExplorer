@@ -16,6 +16,7 @@ export default function CountryDetail() {
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       .then((res) => res.json())
       .then(([data]) => {
+
           setCountryData({ name: data.name.common || "Not Available",
             nativeName: Object.values(data.name.nativeName)[0].common || "Not Available",
             population: data.population || 0,
@@ -28,9 +29,31 @@ export default function CountryDetail() {
             currencies: Object.values(data.currencies)
               .map((currency) => currency.name)
               .join(', ') || "Not Available",
-            borders:['India'],
+            borders:[]
+            });
+
+            if(!data.borders) {
+              data.borders = []
+            }
+
+            Promise.all(data.borders.map((border)=>{
+              return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+              .then((res)=>res.json())
+
+              .then(([borderCountry])=> borderCountry.name.common)
+            })).then((borders)=>{
+              console.log(borders);
+              setCountryData((prevState)=>({...prevState, borders}))
             })
-      })
+              
+                
+                
+
+
+              })
+          
+
+      
       .catch((err) => {
         // Set the error message after a delay (e.g., 3 seconds)
         setTimeout(() => {
@@ -92,13 +115,12 @@ export default function CountryDetail() {
                 <span className="languages"></span>
               </p>
             </div>
-            <div className="border-countries">
+            { countryData.borders.length !== 0 && <div className="border-countries">
               <b>Border Countries: </b>&nbsp;
               {
-                countryData.borders.map((border)=><Link key={border} to={`/${border}`}>{border}</Link>)
+                countryData.borders.map((border) => <Link key={border} to={`/${border}`}>{border}</Link>)
               }
-
-            </div>
+            </div>}
           </div>
         </div>
       </div>
